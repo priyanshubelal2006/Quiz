@@ -50,7 +50,7 @@ export default function AnswerButton({ options, correctAnswer }) {
         if (click) return;
 
         setSelectedAnswer(userChoice);
-        setClick(true);
+        setClick(true)
 
         // Save selected answer
         const savedAnswers = JSON.parse(

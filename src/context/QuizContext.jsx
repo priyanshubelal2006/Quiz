@@ -13,7 +13,8 @@ export default function QuizProvider({ children }) {
     useEffect(() => {
         localStorage.setItem("marks", marks);
     }, [marks]);
-    console.log(marks);
+    const [showResult, setShowResult] = useState(false);
+
     return (
         <QuizContext.Provider
             value={{
@@ -26,7 +27,9 @@ export default function QuizProvider({ children }) {
                 setLoading,
                 loading,
                 marks,
-                setMarks
+                setMarks,
+                showResult,
+                setShowResult
             }}
         >
             {children}
